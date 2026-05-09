@@ -1,0 +1,34 @@
+{
+  "name": "vue2-component-lib",
+  "version": "1.0.0",
+  "private": false,
+  "description": "A Vue2 component library with StyledButton, SimpleCounter and dateUtils",
+  "main": "./dist/vue2-component-lib.umd.js",
+  "module": "./dist/vue2-component-lib.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue2-component-lib.es.js",
+      "require": "./dist/vue2-component-lib.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "prepublishOnly": "npm run build"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "peerDependencies": {
+    "vue": "^2.7.0"
+  },
+  "devDependencies": {
+    "vite": "^4.5.0",
+    "vite-plugin-vue2": "^2.0.3",
+    "vue": "^2.7.16",
+    "vue-template-compiler": "^2.7.16"
+  }
+}
